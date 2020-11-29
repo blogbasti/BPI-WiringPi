@@ -3015,9 +3015,10 @@ int wiringPiISR (int pin, int mode, void (*function)(void))
 			printf("[%s:L%d] the pin:%d is invaild,please check it over!\n", __func__,  __LINE__, pin);
 			return -1;
 		}
-		
+		/* disable code to allow edge detection like in RFSniffer
 		if(edge[bcmGpioPin]==-1)
 		return wiringPiFailure (WPI_FATAL, "wiringPiISR: pin not sunpprt on bananaPi (%d,%d)\n", pin,bcmGpioPin) ;
+		*/
 	}
 
 	
